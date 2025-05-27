@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=109 format=3 uid="uid://bf5somtllgctp"]
+[gd_resource type="TileSet" load_steps=110 format=3 uid="uid://bf5somtllgctp"]
 
 [ext_resource type="Texture2D" uid="uid://bm1ve7cgcfod8" path="res://art/MiniWorldSprites/AllAssetsPreview.png" id="1_lyuis"]
 [ext_resource type="Texture2D" uid="uid://cwkamncyyyywp" path="res://art/MiniWorldSprites/Ground/Cliff-Water.png" id="2_qe4x1"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://1q2h08vgmt70" path="res://art/MiniWorldSprites/Animals/Chicken.png" id="18_ubxbw"]
 [ext_resource type="PackedScene" uid="uid://bq3o4hslo232y" path="res://scenes/bench_up.tscn" id="18_xfv2c"]
 [ext_resource type="Texture2D" uid="uid://8888k14lyqq8" path="res://art/cloud_tileset/cloud_tileset.png" id="19_gpog5"]
+[ext_resource type="PackedScene" uid="uid://dp7s6211uxfxj" path="res://scenes/fire_wisp.tscn" id="19_kyf3a"]
 [ext_resource type="Texture2D" uid="uid://cdfkyhmgh1dx2" path="res://art/TilesA2.png" id="19_mlgjl"]
 [ext_resource type="Texture2D" uid="uid://cx3wyxdb0pyde" path="res://art/Sprout Lands - Sprites/Objects/Basic_Grass_Biom_things.png" id="19_rcobo"]
 [ext_resource type="Texture2D" uid="uid://bhkjweck1ir1p" path="res://art/cloud_tileset/rpgmaker_1/cloud_tileA5_1.png" id="20_ft4ap"]
@@ -1370,6 +1371,7 @@ scenes/4/scene = ExtResource("15_62yi1")
 scenes/5/scene = ExtResource("16_1lh7i")
 scenes/6/scene = ExtResource("17_3o6kn")
 scenes/7/scene = ExtResource("18_xfv2c")
+scenes/8/scene = ExtResource("19_kyf3a")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jj0w3"]
 texture = ExtResource("14_dd6t6")
