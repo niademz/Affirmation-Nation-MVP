@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dorw1bosgufcy"]
+
+[ext_resource type="Texture2D" uid="uid://dpd4p1a06ddog" path="res://art/cloud_tileset/rpgmaker_1/cloud_tileB_1.png" id="1_pxpeg"]
+
+[resource]
+atlas = ExtResource("1_pxpeg")
+region = Rect2(48, 24, 32, 40)

@@ -1,0 +1,127 @@
+[gd_scene load_steps=9 format=3 uid="uid://eld0ql3nss4v"]
+
+[ext_resource type="Texture2D" uid="uid://h8wgg35nu2fr" path="res://art/Sprout Lands - UI Pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_icso1"]
+[ext_resource type="Script" path="res://scenes/shopnewitem.gd" id="2_gwyex"]
+[ext_resource type="Texture2D" uid="uid://ddveaj0gdl4wg" path="res://art/ui_assets/Lock-Closed.png" id="5_l2x11"]
+[ext_resource type="FontFile" uid="uid://rumvk3huqa2f" path="res://art/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="8_e5p6p"]
+[ext_resource type="Texture2D" uid="uid://etphcktba5pi" path="res://art/Sprout Lands - Sprites/Objects/Basic_tools_and_meterials.png" id="10_lohll"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07cot"]
+atlas = ExtResource("1_icso1")
+region = Rect2(104, 56, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyt3k"]
+atlas = ExtResource("10_lohll")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qe41b"]
+atlas = ExtResource("5_l2x11")
+
+[node name="shopnewitem" type="NinePatchRect"]
+offset_right = 192.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("AtlasTexture_07cot")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+script = ExtResource("2_gwyex")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 40.0
+offset_right = 130.0
+offset_bottom = 100.0
+
+[node name="buybuttoncolor" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 65.5
+offset_top = 165.0
+offset_right = 221.5
+offset_bottom = 221.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+color = Color(1, 0, 0.0392157, 0.466667)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 77.5
+offset_top = 170.0
+offset_right = 173.5
+offset_bottom = 202.0
+scale = Vector2(0.4, 0.4)
+theme_override_fonts/font = ExtResource("8_e5p6p")
+theme_override_font_sizes/font_size = 32
+text = "BUY"
+
+[node name="buybutton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 65.5
+offset_top = 165.0
+offset_right = 221.5
+offset_bottom = 221.0
+scale = Vector2(0.4, 0.4)
+
+[node name="coinicon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 47.5
+offset_top = 120.0
+offset_right = 147.5
+offset_bottom = 220.0
+scale = Vector2(0.4, 0.4)
+texture = SubResource("AtlasTexture_pyt3k")
+stretch_mode = 1
+
+[node name="pricelabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 90.0
+offset_top = 132.5
+offset_right = 290.0
+offset_bottom = 182.5
+scale = Vector2(0.4, 0.4)
+theme_override_fonts/font = ExtResource("8_e5p6p")
+theme_override_font_sizes/font_size = 40
+text = "100"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.026
+anchor_top = 0.025
+anchor_right = 0.974
+anchor_bottom = 0.975
+offset_left = 0.0079999
+offset_right = -0.00801086
+
+[node name="Label" type="RichTextLabel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 50.0
+offset_bottom = 85.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("8_e5p6p")
+bbcode_enabled = true
+text = "[center] Coming Soon [/center]"
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 82.5
+offset_top = 117.5
+offset_right = 106.5
+offset_bottom = 145.5
+texture = SubResource("AtlasTexture_qe41b")
+
+[connection signal="pressed" from="buybutton" to="." method="_on_buybutton_pressed"]

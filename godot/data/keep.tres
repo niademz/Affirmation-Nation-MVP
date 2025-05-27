@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://drd73tcjychy6"]
+
+[ext_resource type="Texture2D" uid="uid://63lnqmlpd1vk" path="res://art/MiniWorldSprites/Buildings/Wood/Keep.png" id="1_efw1i"]
+
+[resource]
+atlas = ExtResource("1_efw1i")
+region = Rect2(0, 0, 32, 32)

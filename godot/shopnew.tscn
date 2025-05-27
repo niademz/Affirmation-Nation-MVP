@@ -1,0 +1,252 @@
+[gd_scene load_steps=17 format=3 uid="uid://c8ahl0h0xen1t"]
+
+[ext_resource type="Texture2D" uid="uid://cleng051dejhc" path="res://art/Sprout Lands - UI Pack/Sprite sheets/Setting menu.png" id="1_ysd4s"]
+[ext_resource type="Script" path="res://shopnew.gd" id="2_6qgvd"]
+[ext_resource type="Texture2D" uid="uid://dgjubisoxcgn0" path="res://art/Sprout Lands - UI Pack/Sprite sheets/UI Big Play Button.png" id="2_by8ar"]
+[ext_resource type="PackedScene" uid="uid://eld0ql3nss4v" path="res://scenes/shopnewitem.tscn" id="3_bpfqn"]
+[ext_resource type="FontFile" uid="uid://dqebeph0ojul7" path="res://art/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="3_fru1e"]
+[ext_resource type="FontFile" uid="uid://rumvk3huqa2f" path="res://art/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="4_gulml"]
+[ext_resource type="Texture2D" uid="uid://etphcktba5pi" path="res://art/Sprout Lands - Sprites/Objects/Basic_tools_and_meterials.png" id="6_1otu6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j41rk"]
+atlas = ExtResource("1_ysd4s")
+region = Rect2(136, 8, 112, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhrgs"]
+atlas = ExtResource("2_by8ar")
+region = Rect2(0, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxi7v"]
+atlas = ExtResource("2_by8ar")
+region = Rect2(96, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkxwa"]
+atlas = ExtResource("2_by8ar")
+region = Rect2(0, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2pqc"]
+atlas = ExtResource("2_by8ar")
+region = Rect2(96, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5mc4"]
+atlas = ExtResource("2_by8ar")
+region = Rect2(0, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58gqd"]
+atlas = ExtResource("2_by8ar")
+region = Rect2(96, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8nbo"]
+atlas = ExtResource("1_ysd4s")
+region = Rect2(136, 8, 112, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4sg7"]
+atlas = ExtResource("6_1otu6")
+region = Rect2(32, 16, 16, 16)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.012
+offset_bottom = -7.77606
+
+[node name="shopnew" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = SubResource("AtlasTexture_j41rk")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_6qgvd")
+
+[node name="GridContainer" type="GridContainer" parent="shopnew"]
+clip_contents = true
+layout_mode = 0
+offset_top = 136.0
+offset_right = 590.0
+offset_bottom = 200.0
+columns = 3
+
+[node name="housebutton" type="TextureButton" parent="shopnew/GridContainer"]
+custom_minimum_size = Vector2(194, 32)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_dhrgs")
+texture_pressed = SubResource("AtlasTexture_mxi7v")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="shopnew/GridContainer/housebutton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_fru1e")
+text = "houses"
+horizontal_alignment = 1
+
+[node name="decobutton" type="TextureButton" parent="shopnew/GridContainer"]
+custom_minimum_size = Vector2(194, 32)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_jkxwa")
+texture_pressed = SubResource("AtlasTexture_o2pqc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="shopnew/GridContainer/decobutton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_fru1e")
+text = "decorations"
+horizontal_alignment = 1
+
+[node name="seasonbutton" type="TextureButton" parent="shopnew/GridContainer"]
+custom_minimum_size = Vector2(194, 64)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_k5mc4")
+texture_pressed = SubResource("AtlasTexture_58gqd")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="shopnew/GridContainer/seasonbutton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 176.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_fru1e")
+text = "seasonal"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="NinePatchRect" parent="shopnew"]
+layout_mode = 0
+offset_top = 176.0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = SubResource("AtlasTexture_w8nbo")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="GridContainer2" type="GridContainer" parent="shopnew"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.292
+anchor_right = 0.975
+anchor_bottom = 0.969
+offset_top = -0.064003
+offset_bottom = 0.144043
+columns = 5
+
+[node name="slot1" parent="shopnew/GridContainer2" instance=ExtResource("3_bpfqn")]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 1
+item_id = 1
+
+[node name="slot2" parent="shopnew/GridContainer2" instance=ExtResource("3_bpfqn")]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 1
+item_id = 2
+
+[node name="slot3" parent="shopnew/GridContainer2" instance=ExtResource("3_bpfqn")]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 1
+item_id = 3
+
+[node name="slot4" parent="shopnew/GridContainer2" instance=ExtResource("3_bpfqn")]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 1
+item_id = 4
+
+[node name="slot5" parent="shopnew/GridContainer2" instance=ExtResource("3_bpfqn")]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 1
+item_id = 5
+
+[node name="slot6" parent="shopnew/GridContainer2" instance=ExtResource("3_bpfqn")]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 1
+item_id = 6
+
+[node name="shopnewitem" parent="shopnew/GridContainer2" instance=ExtResource("3_bpfqn")]
+layout_mode = 2
+
+[node name="shopnewitem2" parent="shopnew/GridContainer2" instance=ExtResource("3_bpfqn")]
+layout_mode = 2
+
+[node name="shopnewitem3" parent="shopnew/GridContainer2" instance=ExtResource("3_bpfqn")]
+layout_mode = 2
+
+[node name="shopnewitem4" parent="shopnew/GridContainer2" instance=ExtResource("3_bpfqn")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="shopnew"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 1144.0
+offset_bottom = 88.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_gulml")
+theme_override_font_sizes/font_size = 64
+text = "SHOP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="shopnew"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.757
+anchor_top = 0.037
+anchor_right = 0.868
+anchor_bottom = 0.136
+offset_left = -0.0640259
+offset_top = 0.0240002
+offset_right = 85.064
+offset_bottom = 42.872
+scale = Vector2(0.6, 0.6)
+
+[node name="TextureRect" type="TextureRect" parent="shopnew/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.497
+anchor_bottom = 1.0
+offset_right = 0.060997
+texture = SubResource("AtlasTexture_w4sg7")
+
+[node name="wood_label" type="Label" parent="shopnew/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.642
+anchor_top = 0.14
+anchor_right = 0.998
+anchor_bottom = 0.86
+offset_left = -0.0540009
+offset_top = -0.0200005
+offset_right = 0.373993
+offset_bottom = 0.0199966
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_gulml")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="shopnew/GridContainer/housebutton" to="shopnew" method="_on_housebutton_pressed"]
+[connection signal="pressed" from="shopnew/GridContainer/decobutton" to="shopnew" method="_on_decobutton_pressed"]
+[connection signal="pressed" from="shopnew/GridContainer/seasonbutton" to="shopnew" method="_on_seasonbutton_pressed"]

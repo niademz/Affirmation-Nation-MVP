@@ -1,0 +1,139 @@
+[gd_scene load_steps=14 format=3 uid="uid://f7nn14g7h584"]
+
+[ext_resource type="Texture2D" uid="uid://cd4ckbxl5yf1h" path="res://art/Tiny Swords (Update 010)/UI/Banners/Carved_9Slides.png" id="1_ilek3"]
+[ext_resource type="Script" path="res://scenes/intro_screen.gd" id="1_lx70o"]
+[ext_resource type="FontFile" uid="uid://rumvk3huqa2f" path="res://art/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="2_f71rv"]
+[ext_resource type="Texture2D" uid="uid://dlmeda0gkx4fj" path="res://art/Base Character - Free/idle.png" id="3_wmee0"]
+[ext_resource type="Texture2D" uid="uid://dgjubisoxcgn0" path="res://art/Sprout Lands - UI Pack/Sprite sheets/UI Big Play Button.png" id="5_utjpa"]
+[ext_resource type="Texture2D" uid="uid://h8wgg35nu2fr" path="res://art/Sprout Lands - UI Pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="6_7a3d7"]
+
+[sub_resource type="Theme" id="Theme_llxv4"]
+default_font = ExtResource("2_f71rv")
+default_font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_kau0w"]
+font_size = 40
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4l6l"]
+atlas = ExtResource("3_wmee0")
+region = Rect2(32, 192, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4sjoc"]
+atlas = ExtResource("5_utjpa")
+region = Rect2(0, 32, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6g2g2"]
+atlas = ExtResource("5_utjpa")
+region = Rect2(96, 32, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6vcf"]
+atlas = ExtResource("6_7a3d7")
+region = Rect2(160, 176, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_veebo"]
+atlas = ExtResource("5_utjpa")
+region = Rect2(96, 0, 96, 32)
+
+[node name="IntroScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lx70o")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ilek3")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.049
+anchor_top = 0.148
+anchor_right = 0.96
+anchor_bottom = 0.222
+offset_left = -0.448002
+offset_top = 0.0960007
+offset_right = 0.0799561
+offset_bottom = 0.143982
+theme = SubResource("Theme_llxv4")
+text = "Welcome to Affirmation Nation"
+label_settings = SubResource("LabelSettings_kau0w")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.069
+anchor_top = 0.321
+anchor_right = 0.347
+anchor_bottom = 0.815
+offset_left = 0.511993
+offset_top = -0.00801086
+offset_right = 0.255981
+offset_bottom = -0.120056
+texture = SubResource("AtlasTexture_p4l6l")
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.361
+anchor_top = 0.309
+anchor_right = 0.924
+anchor_bottom = 0.827
+offset_left = 0.12796
+offset_top = -0.23201
+offset_right = -0.447998
+offset_bottom = 0.104004
+
+[node name="PlayButton" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.049
+anchor_top = 0.167
+anchor_right = 0.938
+anchor_bottom = 0.548
+offset_left = 0.247999
+offset_top = -0.112003
+offset_right = 0.175964
+offset_bottom = -0.128006
+texture_normal = SubResource("AtlasTexture_4sjoc")
+texture_pressed = SubResource("AtlasTexture_6g2g2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="PlayButton2" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.049
+anchor_top = 0.619
+anchor_right = 0.938
+anchor_bottom = 1.0
+offset_left = 0.247999
+offset_top = 0.0159912
+offset_right = 0.175964
+texture_normal = SubResource("AtlasTexture_w6vcf")
+texture_pressed = SubResource("AtlasTexture_veebo")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="Panel/PlayButton" to="." method="_on_play_button_pressed"]

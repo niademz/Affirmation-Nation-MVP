@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://wc8nwmg3p4lp"]
+
+[ext_resource type="Texture2D" uid="uid://cvjsqk1nwfa00" path="res://art/Pixel Art Top Down - Basic v1.1.2/Texture/TX Props.png" id="1_cnvj3"]
+
+[resource]
+atlas = ExtResource("1_cnvj3")
+region = Rect2(160, 344, 32, 40)

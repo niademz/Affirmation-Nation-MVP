@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cvlvysosevano"]
+
+[ext_resource type="Texture2D" uid="uid://dhewy4tqce7nq" path="res://art/winter free/winter free/global.png" id="1_10m25"]
+
+[resource]
+atlas = ExtResource("1_10m25")
+region = Rect2(0, 8, 48, 56)

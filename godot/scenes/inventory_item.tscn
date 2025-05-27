@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=3 uid="uid://c5vjcd4380c78"]
+
+[ext_resource type="Script" path="res://scenes/inventory_item.gd" id="1_xr353"]
+[ext_resource type="Texture2D" uid="uid://dgjubisoxcgn0" path="res://art/Sprout Lands - UI Pack/Sprite sheets/UI Big Play Button.png" id="2_h145u"]
+[ext_resource type="Texture2D" uid="uid://cmwredm6w2dv4" path="res://art/Village_Buildings/House/House2/house2Yellow.png" id="2_jspcm"]
+[ext_resource type="FontFile" uid="uid://dqebeph0ojul7" path="res://art/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="3_er26i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xgksf"]
+size = Vector2(32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41xuf"]
+atlas = ExtResource("2_h145u")
+region = Rect2(0, 0, 96, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4aw5q"]
+radius = 11.0
+
+[node name="inventory_item" type="Node2D" groups=["Buildings", "Items"]]
+y_sort_enabled = true
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_xr353")
+item_texture = ExtResource("2_jspcm")
+house_id = null
+
+[node name="Sprite2D" type="CharacterBody2D" parent="."]
+y_sort_enabled = true
+position = Vector2(15, 15)
+scale = Vector2(1.5, 1.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D"]
+position = Vector2(0.666667, 0.666667)
+scale = Vector2(0.666667, 0.666667)
+shape = SubResource("RectangleShape2D_xgksf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+y_sort_enabled = true
+texture = ExtResource("2_jspcm")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_right = 32.0
+offset_bottom = 32.0
+
+[node name="remove" type="NinePatchRect" parent="."]
+visible = false
+z_index = 100
+offset_left = -16.0
+offset_top = -32.0
+offset_right = 48.0
+offset_bottom = -4.0
+texture = SubResource("AtlasTexture_41xuf")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="Label" type="Label" parent="remove"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 52.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_er26i")
+theme_override_font_sizes/font_size = 8
+text = "Remove"
+
+[node name="remove_house" type="Button" parent="remove"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 24.0
+
+[node name="Doorway" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doorway"]
+position = Vector2(16, 32)
+shape = SubResource("CircleShape2D_4aw5q")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="remove/remove_house" to="." method="_on_remove_house_pressed"]
+[connection signal="body_entered" from="Doorway" to="." method="_on_doorway_body_entered"]

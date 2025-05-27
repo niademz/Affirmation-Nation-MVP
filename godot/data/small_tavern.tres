@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cdm1xx75y0yih"]
+
+[ext_resource type="Texture2D" uid="uid://r2ucj33penvy" path="res://art/MiniWorldSprites/Buildings/Wood/Taverns.png" id="1_ip3oy"]
+
+[resource]
+atlas = ExtResource("1_ip3oy")
+region = Rect2(32, 48, 16, 16)

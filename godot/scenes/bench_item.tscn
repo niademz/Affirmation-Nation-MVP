@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://chdaut2pukovl"]
+
+[ext_resource type="Texture2D" uid="uid://elpoegek520w" path="res://data/bench.tres" id="1_gm0a4"]
+[ext_resource type="Script" path="res://scripts/bench_item.gd" id="1_x3vsu"]
+[ext_resource type="Texture2D" uid="uid://dgjubisoxcgn0" path="res://art/Sprout Lands - UI Pack/Sprite sheets/UI Big Play Button.png" id="3_ols5n"]
+[ext_resource type="FontFile" uid="uid://dqebeph0ojul7" path="res://art/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="4_2v3qx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8fnd8"]
+size = Vector2(38, 6)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jxqns"]
+radius = 6.0
+height = 38.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wtep"]
+atlas = ExtResource("3_ols5n")
+region = Rect2(0, 0, 96, 32)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_x3vsu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gm0a4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_8fnd8")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 6)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_jxqns")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -20.0
+offset_top = -7.0
+offset_right = 20.0
+offset_bottom = 8.0
+
+[node name="remove" type="NinePatchRect" parent="."]
+visible = false
+z_index = 100
+offset_left = -32.0
+offset_top = -37.0
+offset_right = 32.0
+offset_bottom = -9.0
+texture = SubResource("AtlasTexture_3wtep")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="Label" type="Label" parent="remove"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 52.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("4_2v3qx")
+theme_override_font_sizes/font_size = 8
+text = "Remove"
+
+[node name="remove_house" type="Button" parent="remove"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 24.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="remove/remove_house" to="." method="_on_remove_house_pressed"]

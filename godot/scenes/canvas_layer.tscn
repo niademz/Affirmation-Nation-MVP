@@ -1,0 +1,388 @@
+[gd_scene load_steps=25 format=3 uid="uid://cgr4mhsq27qxu"]
+
+[ext_resource type="Script" path="res://scripts/canvas_layer.gd" id="1_a6vi4"]
+[ext_resource type="Texture2D" uid="uid://etphcktba5pi" path="res://art/Sprout Lands - Sprites/Objects/Basic_tools_and_meterials.png" id="2_ys7oa"]
+[ext_resource type="FontFile" uid="uid://rumvk3huqa2f" path="res://art/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="3_2vvku"]
+[ext_resource type="Texture2D" uid="uid://lxg8b74kjiis" path="res://art/Mini FX, Items & UI/Common Pick-ups/Coin (16 x 16).png" id="4_mue0r"]
+[ext_resource type="PackedScene" uid="uid://ddtahjh2loica" path="res://scenes/affirmation.tscn" id="5_0ryht"]
+[ext_resource type="LabelSettings" uid="uid://bdl0beuirqptk" path="res://data/fonntttt.tres" id="5_4w44b"]
+[ext_resource type="Texture2D" uid="uid://h8wgg35nu2fr" path="res://art/Sprout Lands - UI Pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="7_5fgbw"]
+[ext_resource type="Texture2D" uid="uid://cxyxbdxsqd65y" path="res://art/Base Character - Free/profile-sheet.png" id="8_xefnn"]
+[ext_resource type="PackedScene" uid="uid://b3hdfgekpf4nk" path="res://scenes/daynightcycle_ui.tscn" id="9_1ttku"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpwj4"]
+atlas = ExtResource("7_5fgbw")
+region = Rect2(160, 176, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_at2sw"]
+atlas = ExtResource("7_5fgbw")
+region = Rect2(832, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfeic"]
+atlas = ExtResource("7_5fgbw")
+region = Rect2(864, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4xia"]
+atlas = ExtResource("2_ys7oa")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rap8a"]
+atlas = ExtResource("4_mue0r")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k0wrp"]
+bg_color = Color(0, 0.968627, 0.972549, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5b7nh"]
+atlas = ExtResource("7_5fgbw")
+region = Rect2(152, 104, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpi0x"]
+atlas = ExtResource("8_xefnn")
+region = Rect2(16, 16, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p75sm"]
+atlas = ExtResource("7_5fgbw")
+region = Rect2(256, 176, 96, 32)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31jnk"]
+bg_color = Color(0.788045, 0.653825, 0.945959, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_citll"]
+atlas = ExtResource("7_5fgbw")
+region = Rect2(352, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqji5"]
+atlas = ExtResource("7_5fgbw")
+region = Rect2(400, 160, 16, 16)
+
+[sub_resource type="Animation" id="Animation_kt7ym"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("thingy/NinePatchRect/TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("AtlasTexture_tpi0x")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("thingy/NinePatchRect/TextureRect:texture:region")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(16, 16, 48, 48)]
+}
+
+[sub_resource type="Animation" id="Animation_aurca"]
+resource_name = "idle_profile"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("thingy/NinePatchRect/TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("AtlasTexture_tpi0x")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("thingy/NinePatchRect/TextureRect:texture:region")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Rect2(16, 16, 48, 48), Rect2(96, 16, 48, 48)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7cy5m"]
+_data = {
+"RESET": SubResource("Animation_kt7ym"),
+"idle_profile": SubResource("Animation_aurca")
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_a6vi4")
+
+[node name="thingy" type="CanvasLayer" parent="."]
+scale = Vector2(0.8, 0.8)
+transform = Transform2D(0.8, 0, 0, 0.8, 0, 0)
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="thingy"]
+anchors_preset = -1
+anchor_left = 0.009
+anchor_top = 0.014
+anchor_right = 0.373
+anchor_bottom = 0.276
+offset_left = -0.368001
+offset_top = -0.0720005
+offset_right = 0.303955
+offset_bottom = 0.151978
+texture = SubResource("AtlasTexture_fpwj4")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="aff_button" type="Panel" parent="thingy"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.912
+anchor_top = 0.849
+anchor_right = 0.968
+anchor_bottom = 0.948
+offset_left = 0.375977
+offset_top = -0.152039
+offset_right = -0.136108
+offset_bottom = -0.304077
+
+[node name="Button" type="TextureButton" parent="thingy/aff_button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -9.609
+anchor_top = -8.344
+anchor_right = -8.609
+anchor_bottom = -7.344
+offset_left = -0.0251465
+offset_top = 0.0161133
+offset_right = -32.025
+offset_bottom = -31.9839
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture_normal = SubResource("AtlasTexture_at2sw")
+texture_pressed = SubResource("AtlasTexture_sfeic")
+
+[node name="TextureRect2" type="TextureRect" parent="thingy"]
+anchors_preset = -1
+anchor_left = 0.142
+anchor_top = 0.159
+anchor_right = 0.191
+anchor_bottom = 0.242
+offset_left = 0.416
+offset_top = -0.0320053
+offset_right = -0.0320129
+offset_bottom = 0.18399
+texture = SubResource("AtlasTexture_f4xia")
+
+[node name="wood_label" type="Label" parent="thingy"]
+anchors_preset = -1
+anchor_left = 0.19
+anchor_top = 0.176
+anchor_right = 0.245
+anchor_bottom = 0.238
+offset_left = 0.11998
+offset_top = -0.0480118
+offset_right = -0.23999
+offset_bottom = -0.223999
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_2vvku")
+theme_override_font_sizes/font_size = 40
+label_settings = ExtResource("5_4w44b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="thingy"]
+anchors_preset = -1
+anchor_left = 0.254
+anchor_top = 0.176
+anchor_right = 0.289
+anchor_bottom = 0.238
+offset_left = 0.391998
+offset_top = -0.0480118
+offset_right = 0.071991
+offset_bottom = -0.223999
+texture = SubResource("AtlasTexture_rap8a")
+
+[node name="coin_count" type="Label" parent="thingy"]
+anchors_preset = -1
+anchor_left = 0.297
+anchor_top = 0.177
+anchor_right = 0.332
+anchor_bottom = 0.239
+offset_left = -0.144012
+offset_top = 0.304001
+offset_right = -0.463898
+offset_bottom = 0.127991
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_2vvku")
+theme_override_font_sizes/font_size = 40
+label_settings = ExtResource("5_4w44b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="thingy"]
+layout_direction = 2
+anchors_preset = -1
+anchor_left = 0.148
+anchor_top = 0.073
+anchor_right = 0.346
+anchor_bottom = 0.134
+offset_left = 0.503983
+offset_top = -0.304005
+offset_right = 0.40799
+offset_bottom = 0.167999
+
+[node name="ProgressBar" type="ProgressBar" parent="thingy/HBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 14.84
+theme_override_styles/fill = SubResource("StyleBoxFlat_k0wrp")
+show_percentage = false
+
+[node name="Label" type="Label" parent="thingy/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_2vvku")
+theme_override_font_sizes/font_size = 32
+
+[node name="NinePatchRect" type="NinePatchRect" parent="thingy"]
+anchors_preset = -1
+anchor_left = 0.014
+anchor_top = 0.025
+anchor_right = 0.147
+anchor_bottom = 0.236
+offset_left = -0.128
+offset_top = -0.200001
+offset_right = -0.343994
+offset_bottom = 0.071991
+texture = SubResource("AtlasTexture_5b7nh")
+
+[node name="TextureRect" type="TextureRect" parent="thingy/NinePatchRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.222
+anchor_top = 0.204
+anchor_right = 0.797
+anchor_bottom = 0.839
+offset_left = 0.0339966
+offset_top = 0.052002
+offset_right = 0.0589905
+offset_bottom = 0.0570068
+texture = SubResource("AtlasTexture_tpi0x")
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="thingy"]
+anchors_preset = -1
+anchor_left = 0.376
+anchor_top = 0.111
+anchor_right = 0.817
+anchor_bottom = 0.21
+offset_left = -0.152039
+offset_top = 2.07199
+offset_right = -169.184
+offset_bottom = -20.08
+scale = Vector2(1.5, 1.5)
+texture = SubResource("AtlasTexture_p75sm")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="TownMoodBar" type="ProgressBar" parent="thingy"]
+anchors_preset = -1
+anchor_left = 0.385
+anchor_top = 0.134
+anchor_right = 0.81
+anchor_bottom = 0.197
+offset_left = 0.47995
+offset_top = 0.167999
+offset_right = -163.12
+offset_bottom = -13.656
+scale = Vector2(1.5, 1.5)
+theme_override_styles/fill = SubResource("StyleBoxFlat_31jnk")
+rounded = true
+show_percentage = false
+
+[node name="TownMoodDecor2" type="TextureRect" parent="thingy"]
+anchors_preset = -1
+anchor_left = 0.778
+anchor_top = 0.145
+anchor_right = 0.799
+anchor_bottom = 0.182
+offset_left = 0.743958
+offset_top = 0.0399933
+offset_right = -7.448
+offset_bottom = -7.936
+scale = Vector2(1.5, 1.5)
+texture = SubResource("AtlasTexture_citll")
+
+[node name="TownMoodDecor1" type="TextureRect" parent="thingy"]
+anchors_preset = -1
+anchor_left = 0.391
+anchor_top = 0.145
+anchor_right = 0.412
+anchor_bottom = 0.182
+offset_left = 0.567871
+offset_top = 0.0399933
+offset_right = -7.62411
+offset_bottom = -7.936
+scale = Vector2(1.5, 1.5)
+texture = SubResource("AtlasTexture_tqji5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7cy5m")
+}
+autoplay = "idle_profile"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="DayNightCycleUI" parent="." instance=ExtResource("9_1ttku")]
+anchor_left = 0.84
+anchor_top = 0.049
+anchor_right = 0.979
+anchor_bottom = 0.198
+offset_left = 0.319946
+offset_top = 0.247999
+offset_right = -79.808
+offset_bottom = -48.304
+scale = Vector2(2, 2)
+
+[node name="Affirmation" parent="." instance=ExtResource("5_0ryht")]
+visible = false
+anchors_preset = -1
+anchor_left = 0.16
+anchor_top = 0.148
+anchor_right = 0.85
+anchor_bottom = 0.831
+offset_left = -0.320007
+offset_top = 0.095993
+offset_right = 340.8
+offset_bottom = 189.512
+scale = Vector2(0.7, 0.7)
+
+[connection signal="pressed" from="thingy/aff_button/Button" to="." method="_on_button_pressed"]

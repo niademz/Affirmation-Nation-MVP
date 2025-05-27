@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bxhk31nhkdid1"]
+
+[ext_resource type="Texture2D" uid="uid://d3y02xhwn4gfi" path="res://art/MiniWorldSprites/Buildings/Wood/Houses.png" id="1_ddsvs"]
+
+[resource]
+atlas = ExtResource("1_ddsvs")
+region = Rect2(16, 48, 16, 16)

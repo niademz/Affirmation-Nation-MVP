@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cb8ecaxuowphr"]
+
+[ext_resource type="Texture2D" uid="uid://dhewy4tqce7nq" path="res://art/winter free/winter free/global.png" id="1_3dxns"]
+
+[resource]
+atlas = ExtResource("1_3dxns")
+region = Rect2(48, 32, 16, 32)

@@ -1,0 +1,307 @@
+[gd_scene load_steps=16 format=3 uid="uid://ddtahjh2loica"]
+
+[ext_resource type="FontFile" uid="uid://dqebeph0ojul7" path="res://art/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="1_crg1u"]
+[ext_resource type="Script" path="res://scripts/affirmation.gd" id="1_j34ra"]
+[ext_resource type="Texture2D" uid="uid://cleng051dejhc" path="res://art/Sprout Lands - UI Pack/Sprite sheets/Setting menu.png" id="2_vatqm"]
+[ext_resource type="FontFile" uid="uid://7lseluimqeje" path="res://data/new_font_file.tres" id="2_wggfq"]
+[ext_resource type="FontFile" uid="uid://rumvk3huqa2f" path="res://art/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="3_vgjql"]
+[ext_resource type="Texture2D" uid="uid://be0teqgfoyecx" path="res://art/Tiny Swords (Update 010)/UI/Banners/Carved_3Slides.png" id="4_2r4ou"]
+[ext_resource type="Texture2D" uid="uid://dlmeda0gkx4fj" path="res://art/Base Character - Free/idle.png" id="4_d0otl"]
+[ext_resource type="Texture2D" uid="uid://05hkkfrj2l1d" path="res://art/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_3Slides.png" id="6_l5xrv"]
+[ext_resource type="Texture2D" uid="uid://bcjlpct0e6h1v" path="res://art/ui_assets/Exit.png" id="8_nok3v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlsiw"]
+atlas = ExtResource("2_vatqm")
+region = Rect2(136, 8, 112, 128)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_uarjr"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dwlbg"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_s0fjx"]
+blend_mode = 1
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j30wl"]
+atlas = ExtResource("4_d0otl")
+region = Rect2(32, 192, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdyfc"]
+atlas = ExtResource("8_nok3v")
+region = Rect2(0, 0, 24, 28)
+
+[node name="Affirmation" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j34ra")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.012
+offset_bottom = 0.223938
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="NinePatchRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.988
+offset_bottom = -0.127991
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_tlsiw")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021
+anchor_top = 0.318
+anchor_right = 0.237
+anchor_bottom = 0.355
+offset_left = -0.192007
+offset_top = 0.169617
+offset_right = -0.0240173
+offset_bottom = -0.102371
+theme_override_fonts/font = ExtResource("1_crg1u")
+theme_override_font_sizes/font_size = 24
+text = "Affirmation 1"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021
+anchor_top = 0.54
+anchor_right = 0.237
+anchor_bottom = 0.576
+offset_left = -0.192007
+offset_top = -0.277313
+offset_right = -0.0236511
+offset_bottom = 0.304657
+theme_override_fonts/font = ExtResource("2_wggfq")
+theme_override_font_sizes/font_size = 24
+text = "Affirmation 2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021
+anchor_top = 0.773
+anchor_right = 0.236
+anchor_bottom = 0.805
+offset_left = -0.192007
+offset_top = 0.158722
+offset_right = 1.12836
+offset_bottom = 3.36469
+theme_override_fonts/font = ExtResource("1_crg1u")
+theme_override_font_sizes/font_size = 24
+text = "Affirmation 3"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect3" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.007
+anchor_top = 0.354
+anchor_right = 0.514
+anchor_bottom = 0.524
+offset_left = -0.0640001
+offset_top = -0.223999
+offset_right = -0.127991
+offset_bottom = 0.255981
+texture = ExtResource("4_2r4ou")
+
+[node name="TextureRect4" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.573
+anchor_right = 0.514
+anchor_bottom = 0.744
+offset_left = 8.0
+offset_top = 0.112
+offset_right = -0.127991
+offset_bottom = -0.0640259
+texture = ExtResource("4_2r4ou")
+
+[node name="TextureRect5" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.007
+anchor_top = 0.805
+anchor_right = 0.514
+anchor_bottom = 0.976
+offset_left = -0.0640001
+offset_top = -0.0800171
+offset_right = -0.127991
+offset_bottom = -0.256042
+texture = ExtResource("4_2r4ou")
+
+[node name="affirmation_1" type="LineEdit" parent="Panel"]
+material = SubResource("CanvasItemMaterial_uarjr")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021
+anchor_top = 0.367
+anchor_right = 0.5
+anchor_bottom = 0.503
+offset_left = -0.192007
+offset_top = 0.321854
+offset_right = -0.000366211
+offset_bottom = -0.190369
+theme_override_fonts/font = ExtResource("2_wggfq")
+theme_override_font_sizes/font_size = 16
+metadata/_edit_use_anchors_ = true
+
+[node name="affirmation_2" type="LineEdit" parent="Panel"]
+material = SubResource("CanvasItemMaterial_dwlbg")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021
+anchor_top = 0.589
+anchor_right = 0.5
+anchor_bottom = 0.724
+offset_left = -0.192007
+offset_top = -0.125061
+offset_right = -0.000366211
+offset_bottom = 0.0186768
+theme_override_fonts/font = ExtResource("2_wggfq")
+theme_override_font_sizes/font_size = 16
+metadata/_edit_use_anchors_ = true
+
+[node name="affirmation_3" type="LineEdit" parent="Panel"]
+material = SubResource("CanvasItemMaterial_s0fjx")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021
+anchor_top = 0.822
+anchor_right = 0.5
+anchor_bottom = 0.958
+offset_left = -0.192007
+offset_top = 0.311096
+offset_right = -0.000366211
+offset_bottom = -0.201233
+theme_override_fonts/font = ExtResource("2_wggfq")
+theme_override_font_sizes/font_size = 16
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.549
+anchor_top = 0.232
+anchor_right = 0.91
+anchor_bottom = 0.829
+offset_left = -0.447998
+offset_top = -0.192001
+offset_right = -0.320068
+offset_bottom = 0.175964
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_j30wl")
+
+[node name="submit" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.638889
+anchor_top = 0.829268
+anchor_right = 0.840278
+anchor_bottom = 0.951219
+focus_neighbor_left = NodePath("../affirmation_3")
+focus_neighbor_top = NodePath("../TextureRect")
+theme_override_fonts/font = ExtResource("3_vgjql")
+theme_override_font_sizes/font_size = 24
+text = "Submit"
+metadata/_edit_use_anchors_ = true
+
+[node name="display_points" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021
+anchor_top = 0.207
+anchor_right = 0.215
+anchor_bottom = 0.293
+offset_left = -0.192001
+offset_top = 0.207993
+offset_right = 0.319992
+offset_bottom = -0.208008
+theme_override_fonts/font = ExtResource("3_vgjql")
+theme_override_font_sizes/font_size = 16
+
+[node name="TextureRect2" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.278
+anchor_top = 0.171
+anchor_right = 0.618
+anchor_bottom = 0.354
+offset_left = -0.256042
+offset_top = -0.176003
+offset_right = 0.0639648
+offset_bottom = -0.223999
+texture = ExtResource("6_l5xrv")
+
+[node name="Label4" type="Label" parent="Panel/TextureRect2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.184
+anchor_top = 0.133
+anchor_right = 0.806
+anchor_bottom = 0.667
+offset_left = -0.127945
+offset_top = 0.0400085
+offset_right = 0.0480347
+offset_bottom = -0.0399933
+theme_override_fonts/font = ExtResource("3_vgjql")
+theme_override_font_sizes/font_size = 16
+text = "Each Affirmation
+Is worth 
+5 points!"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 1
+
+[node name="Exit" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.944
+anchor_top = 0.024
+anchor_right = 0.986
+anchor_bottom = 0.098
+offset_left = 0.511963
+offset_top = 0.256001
+offset_right = 0.12793
+offset_bottom = -0.287994
+icon = SubResource("AtlasTexture_jdyfc")
+icon_alignment = 1
+
+[node name="Label4" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.097
+anchor_top = 0.037
+anchor_right = 0.826
+anchor_bottom = 0.171
+offset_left = -7.744
+offset_top = -0.271997
+offset_right = 0.447937
+offset_bottom = -0.175995
+theme_override_fonts/font = ExtResource("3_vgjql")
+theme_override_font_sizes/font_size = 32
+text = "Enter Daily Affirmations"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Panel/submit" to="." method="_on_submit_pressed"]
+[connection signal="pressed" from="Panel/Exit" to="." method="_on_exit_pressed"]

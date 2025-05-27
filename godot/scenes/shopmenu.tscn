@@ -1,0 +1,210 @@
+[gd_scene load_steps=24 format=3 uid="uid://bmewjhcihtjux"]
+
+[ext_resource type="Script" path="res://scripts/shopmenu.gd" id="1_2lyhb"]
+[ext_resource type="Texture2D" uid="uid://biokvx06rk2cq" path="res://art/ui_assets/Chevron-Arrow-Right.png" id="2_yip6u"]
+[ext_resource type="Texture2D" uid="uid://dpjkkisetigjr" path="res://art/MiniWorldSprites/Buildings/Enemy/Orc/AllBuildings-Preview.png" id="3_jatfu"]
+[ext_resource type="Texture2D" uid="uid://btj20p0da5ngg" path="res://art/MiniWorldSprites/Buildings/Wood/Docks.png" id="4_mdl2r"]
+[ext_resource type="Texture2D" uid="uid://63lnqmlpd1vk" path="res://art/MiniWorldSprites/Buildings/Wood/Keep.png" id="5_hibov"]
+[ext_resource type="Texture2D" uid="uid://d3y02xhwn4gfi" path="res://art/MiniWorldSprites/Buildings/Wood/Houses.png" id="6_doku0"]
+[ext_resource type="Texture2D" uid="uid://def3t2me5jkar" path="res://art/MiniWorldSprites/Buildings/Wood/Huts.png" id="7_53w8n"]
+[ext_resource type="Texture2D" uid="uid://r2ucj33penvy" path="res://art/MiniWorldSprites/Buildings/Wood/Taverns.png" id="8_vg6ak"]
+[ext_resource type="Texture2D" uid="uid://lxg8b74kjiis" path="res://art/Mini FX, Items & UI/Common Pick-ups/Coin (16 x 16).png" id="9_i0whk"]
+[ext_resource type="Texture2D" uid="uid://etphcktba5pi" path="res://art/Sprout Lands - Sprites/Objects/Basic_tools_and_meterials.png" id="10_gyola"]
+[ext_resource type="FontFile" uid="uid://rumvk3huqa2f" path="res://art/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="11_mvkhc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvi3k"]
+atlas = ExtResource("2_yip6u")
+region = Rect2(0, 0, 18, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x6oxy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvi3k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynga2"]
+atlas = ExtResource("3_jatfu")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_er0sc"]
+atlas = ExtResource("4_mdl2r")
+region = Rect2(0, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wu367"]
+atlas = ExtResource("5_hibov")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_md1hr"]
+atlas = ExtResource("6_doku0")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hgfh4"]
+atlas = ExtResource("7_53w8n")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y36k5"]
+atlas = ExtResource("8_vg6ak")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_28ift"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynga2")
+}],
+"loop": true,
+"name": &"big_hut",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_er0sc")
+}],
+"loop": true,
+"name": &"dock_house",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wu367")
+}],
+"loop": true,
+"name": &"keep",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_md1hr")
+}],
+"loop": true,
+"name": &"small_house",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hgfh4")
+}],
+"loop": true,
+"name": &"small_hut",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y36k5")
+}],
+"loop": true,
+"name": &"small_tavern",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jwql"]
+atlas = ExtResource("9_i0whk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhrfv"]
+atlas = ExtResource("10_gyola")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pvuyq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jwql")
+}],
+"loop": true,
+"name": &"coin",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhrfv")
+}],
+"loop": true,
+"name": &"wood",
+"speed": 5.0
+}]
+
+[node name="shopmenu" type="StaticBody2D"]
+script = ExtResource("1_2lyhb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 512.0
+offset_bottom = 320.0
+color = Color(0.393086, 0.393085, 0.393086, 0.431373)
+
+[node name="rightbuttonicon" type="AnimatedSprite2D" parent="."]
+position = Vector2(144, 248)
+scale = Vector2(1.77778, 1.71429)
+sprite_frames = SubResource("SpriteFrames_x6oxy")
+
+[node name="leftbuttonicon" type="AnimatedSprite2D" parent="."]
+position = Vector2(72, 248)
+rotation = -3.14159
+scale = Vector2(1.77778, 1.71429)
+sprite_frames = SubResource("SpriteFrames_x6oxy")
+
+[node name="buttonright" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 112.0
+offset_top = 200.0
+offset_right = 176.0
+offset_bottom = 298.0
+
+[node name="buttonleft" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 40.0
+offset_top = 200.0
+offset_right = 104.0
+offset_bottom = 298.0
+
+[node name="icon" type="AnimatedSprite2D" parent="."]
+position = Vector2(96, 96)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_28ift")
+animation = &"big_hut"
+
+[node name="coinicon" type="AnimatedSprite2D" parent="."]
+position = Vector2(448, 96)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_pvuyq")
+animation = &"wood"
+
+[node name="pricelabel" type="RichTextLabel" parent="."]
+offset_left = 240.0
+offset_top = 88.0
+offset_right = 368.0
+offset_bottom = 128.0
+theme_override_fonts/normal_font = ExtResource("11_mvkhc")
+theme_override_font_sizes/normal_font_size = 40
+text = "100"
+
+[node name="buybuttoncolor" type="ColorRect" parent="."]
+offset_left = 256.0
+offset_top = 192.0
+offset_right = 448.0
+offset_bottom = 288.0
+color = Color(1, 0, 0.0392157, 0.466667)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 288.0
+offset_top = 224.0
+offset_right = 408.0
+offset_bottom = 264.0
+theme_override_fonts/font = ExtResource("11_mvkhc")
+theme_override_font_sizes/font_size = 40
+text = "BUY"
+
+[node name="buybutton" type="Button" parent="."]
+offset_left = 256.0
+offset_top = 192.0
+offset_right = 448.0
+offset_bottom = 288.0
+
+[connection signal="pressed" from="buttonright" to="." method="_on_buttonright_pressed"]
+[connection signal="pressed" from="buttonleft" to="." method="_on_buttonleft_pressed"]
+[connection signal="pressed" from="buybutton" to="." method="_on_buybutton_pressed"]

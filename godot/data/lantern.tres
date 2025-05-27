@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://ctdp6neqnhrem"]
+
+[ext_resource type="Texture2D" uid="uid://bcfcq26vbdnq6" path="res://art/Lantern 6 - Silver and Yellow.png" id="1_6qsjf"]
+
+[resource]
+atlas = ExtResource("1_6qsjf")
+region = Rect2(204, 0, 34, 40)

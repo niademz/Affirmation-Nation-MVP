@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://b1si7r81u1y8o"]
+
+[ext_resource type="Texture2D" uid="uid://dpjkkisetigjr" path="res://art/MiniWorldSprites/Buildings/Enemy/Orc/AllBuildings-Preview.png" id="1_kdo4k"]
+
+[resource]
+atlas = ExtResource("1_kdo4k")
+region = Rect2(128, 32, 32, 32)

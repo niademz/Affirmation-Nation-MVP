@@ -1,0 +1,64 @@
+[gd_scene load_steps=16 format=3 uid="uid://5ygycu26a0be"]
+
+[ext_resource type="PackedScene" uid="uid://dmj47jqopelwu" path="res://scenes/world/nation/grid2_2.tscn" id="1_755lv"]
+[ext_resource type="PackedScene" uid="uid://c1nnobjf1lqft" path="res://scenes/world/nation/grid2_1.tscn" id="2_wvskj"]
+[ext_resource type="PackedScene" uid="uid://bgrffp05gtrv" path="res://scenes/world/nation/grid1_2.tscn" id="3_0ni41"]
+[ext_resource type="PackedScene" uid="uid://dhhlcrax4ufgg" path="res://scenes/world/nation/grid2_3.tscn" id="4_et7kn"]
+[ext_resource type="PackedScene" uid="uid://dxl2wa1yyoi7a" path="res://scenes/world/nation/grid3_2.tscn" id="5_aokd3"]
+[ext_resource type="PackedScene" uid="uid://tlkoa6sbnd71" path="res://scenes/player.tscn" id="6_5i46o"]
+[ext_resource type="PackedScene" uid="uid://c5txe1bw5lt53" path="res://scenes/world/nation/grid1_1.tscn" id="7_3mxq0"]
+[ext_resource type="PackedScene" uid="uid://88ikmn3kddnk" path="res://scenes/world/nation/grid1_0.tscn" id="7_r0yby"]
+[ext_resource type="PackedScene" uid="uid://pyed80507mwx" path="res://scenes/world/nation/grid1_3.tscn" id="8_0s78k"]
+[ext_resource type="PackedScene" uid="uid://bwd7xtu4o12ks" path="res://scenes/world/nation/grid3_1.tscn" id="9_btu3g"]
+[ext_resource type="PackedScene" uid="uid://c6ou7goy5m780" path="res://scenes/world/nation/grid3_3.tscn" id="10_4vnaj"]
+[ext_resource type="PackedScene" uid="uid://cwnrbh8wq6br6" path="res://scenes/world/nation/grid0_2.tscn" id="12_1x0py"]
+[ext_resource type="PackedScene" uid="uid://cfxy0lxfurjtv" path="res://scenes/world/nation/grid0_1.tscn" id="13_tsys3"]
+[ext_resource type="PackedScene" uid="uid://xmifnr4d2lnf" path="res://scenes/world/nation/grid0_0.tscn" id="14_lmlup"]
+[ext_resource type="PackedScene" uid="uid://dxhfv3ot8nnyw" path="res://scenes/world/nation/grid2_0.tscn" id="15_oejth"]
+
+[node name="Node2D" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Node2D" parent="." instance=ExtResource("1_755lv")]
+
+[node name="Node2D2" parent="." instance=ExtResource("2_wvskj")]
+position = Vector2(-672, 0)
+
+[node name="Node2D3" parent="." instance=ExtResource("3_0ni41")]
+position = Vector2(0, -664)
+
+[node name="Node2D4" parent="." instance=ExtResource("4_et7kn")]
+position = Vector2(672, 0)
+
+[node name="Node2D5" parent="." instance=ExtResource("5_aokd3")]
+position = Vector2(0, 672)
+
+[node name="Node2D6" parent="." instance=ExtResource("7_3mxq0")]
+position = Vector2(-672, -664)
+
+[node name="Node2D13" parent="." instance=ExtResource("7_r0yby")]
+position = Vector2(-1344, -664)
+
+[node name="Node2D7" parent="." instance=ExtResource("8_0s78k")]
+position = Vector2(672, -664)
+
+[node name="Node2D8" parent="." instance=ExtResource("9_btu3g")]
+position = Vector2(-672, 672)
+
+[node name="Node2D9" parent="." instance=ExtResource("10_4vnaj")]
+position = Vector2(672, 672)
+
+[node name="Node2D10" parent="." instance=ExtResource("12_1x0py")]
+position = Vector2(-8, -1336)
+
+[node name="Node2D11" parent="." instance=ExtResource("13_tsys3")]
+position = Vector2(-672, -1336)
+
+[node name="Node2D12" parent="." instance=ExtResource("14_lmlup")]
+position = Vector2(-1344, -1336)
+
+[node name="Node2D14" parent="." instance=ExtResource("15_oejth")]
+position = Vector2(-1344, 8)
+
+[node name="Player" parent="." instance=ExtResource("6_5i46o")]
+position = Vector2(16, -136)

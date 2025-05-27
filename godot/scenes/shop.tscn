@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://x24aijhsfakj"]
+
+[ext_resource type="Texture2D" uid="uid://cr3bvwc2v1tso" path="res://art/shopkeeper.png" id="1_01bx6"]
+[ext_resource type="Script" path="res://scripts/shop.gd" id="1_s1ir5"]
+[ext_resource type="Texture2D" uid="uid://den2je3n0e72g" path="res://art/farmingTilesheetComplete.png" id="2_sh6d8"]
+[ext_resource type="PackedScene" uid="uid://c8ahl0h0xen1t" path="res://shopnew.tscn" id="5_37fbc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wvs6"]
+atlas = ExtResource("1_01bx6")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ef6k8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wvs6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvynk"]
+size = Vector2(24, 6)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x1tej"]
+
+[node name="shop" type="StaticBody2D"]
+script = ExtResource("1_s1ir5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 1)
+sprite_frames = SubResource("SpriteFrames_ef6k8")
+frame_progress = 0.700441
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -3)
+texture = ExtResource("2_sh6d8")
+region_enabled = true
+region_rect = Rect2(0, 176, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+shape = SubResource("RectangleShape2D_pvynk")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_x1tej")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="shopnew" parent="CanvasLayer" instance=ExtResource("5_37fbc")]
+visible = false
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 120.0
+offset_top = 56.0
+offset_right = 120.0
+offset_bottom = 56.0
+scale = Vector2(0.8, 0.8)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
