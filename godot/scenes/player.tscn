@@ -540,7 +540,7 @@ y_sort_enabled = true
 position = Vector2(-0.280701, 1.14286)
 scale = Vector2(0.256, 0.533334)
 sprite_frames = SubResource("SpriteFrames_mhjly")
-animation = &"side_walk"
+animation = &"front_idle"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
