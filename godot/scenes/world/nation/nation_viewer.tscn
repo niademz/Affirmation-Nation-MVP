@@ -30,31 +30,31 @@ position = Vector2(0, -928)
 position = Vector2(928, 0)
 
 [node name="Node2D5" parent="." instance=ExtResource("5_aokd3")]
-position = Vector2(8, 1168)
+position = Vector2(0, 928)
 
 [node name="Node2D6" parent="." instance=ExtResource("7_3mxq0")]
-position = Vector2(-1168, -1104)
+position = Vector2(-912, -952)
 
 [node name="Node2D13" parent="." instance=ExtResource("7_r0yby")]
-position = Vector2(-2160, -1088)
+position = Vector2(-1936, -944)
 
 [node name="Node2D7" parent="." instance=ExtResource("8_0s78k")]
 position = Vector2(928, -928)
 
 [node name="Node2D8" parent="." instance=ExtResource("9_btu3g")]
-position = Vector2(-1128, 1144)
+position = Vector2(-936, 904)
 
 [node name="Node2D9" parent="." instance=ExtResource("10_4vnaj")]
-position = Vector2(896, 1136)
+position = Vector2(1000, 960)
 
 [node name="Node2D10" parent="." instance=ExtResource("12_1x0py")]
-position = Vector2(-8, -2048)
+position = Vector2(0, -1840)
 
 [node name="Node2D11" parent="." instance=ExtResource("13_tsys3")]
-position = Vector2(-1240, -2088)
+position = Vector2(-928, -1808)
 
 [node name="Node2D12" parent="." instance=ExtResource("14_lmlup")]
-position = Vector2(-2168, -2072)
+position = Vector2(-1944, -1840)
 
 [node name="Node2D14" parent="." instance=ExtResource("15_oejth")]
-position = Vector2(-2160, 24)
+position = Vector2(-1976, 16)
