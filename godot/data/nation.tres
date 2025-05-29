@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=116 format=3 uid="uid://bf5somtllgctp"]
+[gd_resource type="TileSet" load_steps=117 format=3 uid="uid://bf5somtllgctp"]
 
 [ext_resource type="Texture2D" uid="uid://bm1ve7cgcfod8" path="res://art/MiniWorldSprites/AllAssetsPreview.png" id="1_lyuis"]
 [ext_resource type="Texture2D" uid="uid://cwkamncyyyywp" path="res://art/MiniWorldSprites/Ground/Cliff-Water.png" id="2_qe4x1"]
@@ -32,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://cdfkyhmgh1dx2" path="res://art/TilesA2.png" id="19_mlgjl"]
 [ext_resource type="Texture2D" uid="uid://cx3wyxdb0pyde" path="res://art/Sprout Lands - Sprites/Objects/Basic_Grass_Biom_things.png" id="19_rcobo"]
 [ext_resource type="Texture2D" uid="uid://bhkjweck1ir1p" path="res://art/cloud_tileset/rpgmaker_1/cloud_tileA5_1.png" id="20_ft4ap"]
+[ext_resource type="PackedScene" uid="uid://c5147p2n268vs" path="res://scenes/fountain.tscn" id="20_gljjk"]
 [ext_resource type="Texture2D" uid="uid://dn2nhwx0dke2p" path="res://art/MiniWorldSprites/Nature/WinterTrees.png" id="20_m6u6q"]
 [ext_resource type="Texture2D" uid="uid://mp048mounvjh" path="res://art/TilesA3.png" id="20_r0svd"]
 [ext_resource type="Texture2D" uid="uid://cvfup2fvoelkx" path="res://art/MiniWorldSprites/Nature/Cactus.png" id="21_m5vae"]
@@ -1380,6 +1381,7 @@ scenes/5/scene = ExtResource("16_1lh7i")
 scenes/6/scene = ExtResource("17_3o6kn")
 scenes/7/scene = ExtResource("18_xfv2c")
 scenes/8/scene = ExtResource("19_kyf3a")
+scenes/10/scene = ExtResource("20_gljjk")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jj0w3"]
 texture = ExtResource("14_dd6t6")
@@ -4296,6 +4298,7 @@ texture = ExtResource("50_u52vn")
 5:0/0 = 0
 5:0/0/y_sort_origin = -12
 0:1/0 = 0
+0:1/0/y_sort_origin = -12
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0

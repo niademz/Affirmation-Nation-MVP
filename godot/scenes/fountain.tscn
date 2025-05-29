@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://c5147p2n268vs"]
+
+[ext_resource type="Texture2D" uid="uid://xxuqkw0ps4bt" path="res://art/Park_FountainON.png" id="1_ijqjv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfw8r"]
+atlas = ExtResource("1_ijqjv")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nig12"]
+atlas = ExtResource("1_ijqjv")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y15h3"]
+atlas = ExtResource("1_ijqjv")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clhse"]
+atlas = ExtResource("1_ijqjv")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_li1xk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jfw8r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nig12")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y15h3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clhse")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_75dvw"]
+radius = 40.0
+height = 112.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+z_index = -1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_li1xk")
+autoplay = "default"
+frame_progress = 0.221327
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_75dvw")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://dmj47jqopelwu"]
+[gd_scene load_steps=9 format=4 uid="uid://dmj47jqopelwu"]
 
 [ext_resource type="TileSet" uid="uid://bf5somtllgctp" path="res://data/nation.tres" id="1_nip14"]
 [ext_resource type="PackedScene" uid="uid://c5vjcd4380c78" path="res://scenes/inventory_item.tscn" id="2_jp5kr"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://de5qg6hxea5ja" path="res://art/Village_Buildings/forester's hut/forester's hutRed.png" id="4_1r1ty"]
 [ext_resource type="Texture2D" uid="uid://cyi8cief67fou" path="res://art/Village_Buildings/woodcutter's hut/woodcutter's hutBlue.png" id="5_dcsoa"]
 [ext_resource type="PackedScene" uid="uid://dp7s6211uxfxj" path="res://scenes/fire_wisp.tscn" id="7_grj1t"]
-[ext_resource type="PackedScene" uid="uid://tlkoa6sbnd71" path="res://scenes/player.tscn" id="7_x1o6r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t4q8i"]
 radius = 216.148
@@ -64,6 +63,3 @@ visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TownHub"]
 shape = SubResource("CircleShape2D_t4q8i")
-
-[node name="Player" parent="." instance=ExtResource("7_x1o6r")]
-position = Vector2(1, 121)
